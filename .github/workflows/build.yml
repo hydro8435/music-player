@@ -26,9 +26,7 @@ jobs:
       - name: Build
         run: npm run build:win
 
-        - name: Upload Release
+      - name: Upload Release
         uses: softprops/action-gh-release@v2
         with:
-        files: dist/**/*.exe
-        env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          files: dist/**/*.exe
